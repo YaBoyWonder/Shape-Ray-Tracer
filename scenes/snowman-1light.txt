@@ -1,0 +1,98 @@
+begin camera
+eye 3 6 15
+lookat 0 0 -1
+vup 0 1 0
+clip -1 1 -1 1 4
+ambient_fraction 0.2
+end camera
+
+begin material
+name shiny_red
+ambient   0.5 0.15 0.15
+diffuse   1 0.3 0.3
+specular  0.5 0.5 0.5
+shininess 20
+end material
+
+begin material
+name medium_green
+ambient   0.15 0.5 0.15
+diffuse   0.3 1.0 0.3
+specular  0.5 0.5 0.5
+shininess 10
+end material
+
+begin material
+name dull_blue
+ambient   0.2 0.2 0.5
+diffuse   0.4 0.4 1
+specular  0.5 0.5 0.5
+shininess 5
+end material
+
+begin material
+name medium_orange
+ambient   0.5 0.4 0.25
+diffuse   1 0.8 0.5
+specular  0.5 0.5 0.5
+shininess 10
+end material
+
+begin material
+name shiny_gray
+ambient   0.3 0.3 0.3
+diffuse   0.6 0.6 0.6
+specular  0.5 0.5 0.5
+shininess 40
+end material
+
+begin light
+name white_light
+color    0.7 0.7 0.7
+position 0 20 10
+end light
+
+begin sphere
+name top_ball
+center   0 3 0
+radius   0.5
+material shiny_red
+end sphere
+
+begin sphere
+name middle_ball
+center   0 2 0
+radius   0.75
+material medium_green
+end sphere
+
+begin sphere
+name bottom_ball
+center   0 0.5 0
+radius   1
+material dull_blue
+end sphere
+
+begin triangle
+name left_plane_half
+A   2 -2.5 -4
+B  -2 -2.5  4
+C   2 -2.5  4
+material medium_orange
+end triangle
+
+begin triangle
+name right_plane_half
+A  -2 -2.5 -4
+B  -2 -2.5  4
+C   2 -2.5 -4
+material medium_orange
+end triangle
+
+begin cylinder
+name pedestal
+center 0 -1.5 0
+height 2
+radius 1
+material shiny_gray
+end cylinder

@@ -1,0 +1,37 @@
+begin camera
+eye 3 6 15
+lookat 0 0 -1
+vup 0 1 0
+clip -1 1 -1 1 4
+ambient_fraction 0.2
+end camera
+
+
+begin material
+name shiny_gray
+ambient   0.3 0.3 0.3
+diffuse   0.6 0.6 0.6
+specular  0.5 0.5 0.5
+shininess 40
+end material
+
+begin light
+name white_light
+color    0.7 0.7 0.7
+position 10 10 10
+end light
+
+begin light
+name red_light
+color    0.7 0 0
+position -10 10 10
+end light
+
+
+begin cylinder
+name pedestal
+center 0 -1.5 0
+height 2
+radius 1
+material shiny_gray
+end cylinder
